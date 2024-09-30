@@ -1,9 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 using PlayCenter.Models;
 using PlayCenter.Views;
 using PlayCenter.ViewModels;
+using System.Windows.Controls.Primitives;
+using System.Windows.Controls;
+
+
 
 namespace PlayCenter
 {
@@ -17,12 +22,12 @@ namespace PlayCenter
 
             Games = new ObservableCollection<Game>
             {
-                new Game { Name = "Tetris", ImagePath = "Images/tetrist.png", Description = "A classic tile-matching puzzle game.", ExecutablePath = "Tetris.exe" },
-                new Game { Name = "Calendar", ImagePath = "Images/calendar.png", Description = "A simple calendar application.", ExecutablePath = "Calender.exe" },
-                new Game { Name = "TicTac", ImagePath = "Images/ticTac.png", Description = "A simple calendar application.", ExecutablePath = "Tic-Tac.exe" },
-                new Game { Name = "Snake", ImagePath = "Images/snake.png", Description = "A simple calendar application.", ExecutablePath = "Snake.exe" },
-                new Game { Name = "Pacman", ImagePath = "Images/pacman.png", Description = "A simple calendar application.", ExecutablePath = "Pacman.exe" },
-                new Game { Name = "Weather", ImagePath = "Images/rain_cloud.png", Description = "A simple calendar application.", ExecutablePath = "Weather.exe" },
+                new Game { Name = "Tetris", ImagePath = "/Images/tetrist.png", Description = "A classic tile-matching puzzle game.", ExecutablePath = "Tetris.exe" },
+                new Game { Name = "Calendar", ImagePath = "/Images/calendar.png", Description = "A simple calendar application.", ExecutablePath = "Calender.exe" },
+                new Game { Name = "TicTac", ImagePath = "/Images/ticTac.png", Description = "A simple calendar application.", ExecutablePath = "TicTacGame.exe" },
+                new Game { Name = "Snake", ImagePath = "/Images/snake.png", Description = "A simple calendar application.", ExecutablePath = "Snake.exe" },
+                new Game { Name = "Pacman", ImagePath = "/Images/pacman.png", Description = "A simple calendar application.", ExecutablePath = "PacManGame.exe" },
+                new Game { Name = "Weather", ImagePath = "/Images/rain_cloud.png", Description = "A simple calendar application.", ExecutablePath = "WeatherApp.exe" },
             };
 
             DataContext = this;
@@ -38,5 +43,8 @@ namespace PlayCenter
             };
             gameDetailsWindow.ShowDialog();
         }
+
+
+       
     }
 }

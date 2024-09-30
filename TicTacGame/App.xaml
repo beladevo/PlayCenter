@@ -1,0 +1,11 @@
+﻿<Application x:Class="TicTacGame.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TicTacGame"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="BackgroundColor" Color="#FFC0CB" />
+        <SolidColorBrush x:Key="ButtonColor" Color="#FFB1C1" />
+        <SolidColorBrush x:Key="LineColor" Color="#FF69B4" />
+    </Application.Resources>
+</Application>

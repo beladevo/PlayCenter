@@ -1,13 +1,40 @@
 <Window x:Class="PlayCenter.Views.GameDetails"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Game Details" Height="400" Width="600">
-    <Grid Margin="10">
-        <StackPanel>
-            <Image Source="{Binding SelectedGame.ImagePath}" Height="150" Width="150"/>
-            <TextBlock Text="{Binding SelectedGame.Name}" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
-            <TextBlock Text="{Binding SelectedGame.Description}" TextWrapping="Wrap" Margin="10"/>
-            <Button Content="View" Width="100" Command="{Binding LaunchGameCommand}" Margin="10" HorizontalAlignment="Center"/>
-        </StackPanel>
+        Title="Game Details" Height="450" Width="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F0F2F5" FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Border Background="White" CornerRadius="10" Padding="20">
+            <StackPanel>
+                <!-- Image Section -->
+                <Border BorderBrush="#D3D3D3" BorderThickness="1" CornerRadius="75" Width="150" Height="150" HorizontalAlignment="Center">
+                    <Image Source="{Binding SelectedGame.ImagePath}" Stretch="UniformToFill" Width="150" Height="150" />
+                </Border>
+
+                <!-- Game Title -->
+                <TextBlock Text="{Binding SelectedGame.Name}" FontSize="26" FontWeight="Bold" Foreground="#333333" 
+                           HorizontalAlignment="Center" Margin="20,10,20,5" />
+
+                <!-- Game Description -->
+                <TextBlock Text="{Binding SelectedGame.Description}" FontSize="16" Foreground="#666666" TextWrapping="Wrap" 
+                           HorizontalAlignment="Center" Margin="10,0" Width="400" TextAlignment="Center" />
+
+                <!-- Action Buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20,30,0,0">
+                    <!-- View Game Button -->
+                    <Button Content="Launch Game" Command="{Binding LaunchGameCommand}" Padding="10,5"
+                            FontSize="16" Foreground="White" Background="#0078D4" BorderBrush="#0078D4" 
+                            Width="150" Height="40"/>
+
+                    <!-- More Info Button -->
+                    <Button Content="More Info" Padding="10,5" FontSize="16" Foreground="#0078D4"
+                            Background="Transparent" BorderBrush="#0078D4" BorderThickness="2"
+                            Width="150" Height="40"  Margin="20,0,0,0"
+                            />
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

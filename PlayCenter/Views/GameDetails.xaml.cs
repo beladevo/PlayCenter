@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 
+
 namespace PlayCenter.Views
 {
     public partial class GameDetails : Window
@@ -8,5 +9,7 @@ namespace PlayCenter.Views
         {
             InitializeComponent();
         }
+
+       
     }
 }

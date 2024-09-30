@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<LangVersion>10.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>pamansmile.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Images\orange.jpg" />
+		<None Remove="Images\pacman.jpg" />
+		<None Remove="Images\pink.jpg" />
+		<None Remove="Images\red.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="pamansmile.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Images\orange.jpg" />
+		<Resource Include="Images\pacman.jpg" />
+		<Resource Include="Images\pink.jpg" />
+		<Resource Include="Images\red.jpg" />
+	</ItemGroup>
+
+</Project>
